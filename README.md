@@ -3,7 +3,6 @@
 ## Elevator Pitch
 Sneaky Snake
 Move through each floor as a snake just looking for a nice meal. Be careful if you eat too much though as every bit of food will make you longer and less sneaky. Try not to eat your own tail by accident!! 
-## Tech Stacks
 
 ## Wireframes
 
@@ -33,5 +32,9 @@ npc snakes in later stages that can be eaten and also move independently
 
 Render stage select screen
 
+adding audio
+
 ## Potential Roadblocks
+
+
 
