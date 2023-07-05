@@ -1,11 +1,16 @@
 # Project 1 Pitch
 
 ## Elevator Pitch
+<<<<<<< HEAD
 Move through each floor as a snake just looking for a nice meal. Be carful if you eat too much though as every bit of food will make you longer and less sneaky. Try not to eat your own tail by accident!! 
 ## Tech Stacks
 HTML
 Javascript
 CSS
+=======
+Sneaky Snake
+Move through each floor as a snake just looking for a nice meal. Be careful if you eat too much though as every bit of food will make you longer and less sneaky. Try not to eat your own tail by accident!! 
+>>>>>>> refs/remotes/origin/main
 
 ## Wireframes
 ![wireframe](C2C249EE-6210-429F-9CDE-065952C00407.jpeg)
@@ -35,9 +40,15 @@ npc snakes in later stages that can be eaten and eat the the player while also m
 
 Render stage select screen
 
+adding audio
+
 ## Potential Roadblocks
 
+<<<<<<< HEAD
 Figuring out how the bits will work (Spawning in or having a set amount every stage)
 
 Having the snake grow every time after it eats a bit and keeping the growing body moving together at one
+=======
+
+>>>>>>> refs/remotes/origin/main
 
