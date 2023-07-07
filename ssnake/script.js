@@ -23,6 +23,7 @@ let snakeLength = [];
   let bitsR;
   let bitsC;
 
+  let gameOver = false;
 
 	/*----- cached elements  -----*/
 
@@ -55,7 +56,9 @@ let snakeLength = [];
 
   function update() {
 
-
+if (gameOver) {
+  return;
+}
     //changes color of the grid to green
    context.fillStyle = "green";
    context.fillRect(0, 0, grid.width, grid.height);
@@ -83,12 +86,16 @@ let snakeLength = [];
    snakeC += moveC * cellSize;
    snakeR += moveR * cellSize;
    context.fillRect(snakeR, snakeC, cellSize, cellSize)
-   //
+   //Increase length of snake when he 
    for (let i = 0; i < snakeLength.length; i++) {
      context.fillRect(snakeLength[i][0], snakeLength[i][1], cellSize, cellSize);
     }
   
-   
+   // Game Over Conditions
+   if (snakeR < 0 || snakeR > cols*cellSize || snakeC < 0 || snakeC > rows*cellSize)
+   gameOver = true;
+   alert("Game Over")
+
 
   }
   function bitPlacement() {
