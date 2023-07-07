@@ -1,6 +1,3 @@
-* {
-
-}
 
 body {
     height: 100vh;
@@ -21,16 +18,21 @@ header {
     justify-content: center;
     color: gray;
 }
-#grid-container {
-    display: grid;
-    grid-template-columns: repeat(20, 1vmin); /* 10 equal-sized columns */
-    grid-template-rows: repeat(20, 1vmin); /* 10 equal-sized rows */
-    gap: px; /* Gap between grid cells */
-    margin: 20px; /* Add some margin around the grid */
 
-  }
-  
-  .grid-cell {
-    background-color: lightgray;
-    border: 1px solid gray;
-  }
+#grid {
+  border: black;
+  border-color: black;
+}
+
+.right-border {
+  border-right: .2em solid steelblue
+}
+.left-border {
+
+}
+.top-border {
+
+}
+.bottom-border {
+
+}
