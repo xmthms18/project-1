@@ -92,11 +92,16 @@ if (gameOver) {
     }
   
    // Game Over Conditions
-   if (snakeR < 0 || snakeR > cols*cellSize || snakeC < 0 || snakeC > rows*cellSize)
-   gameOver = true;
-   alert("Game Over")
+   if (snakeR < 0 || snakeR > cols*cellSize || snakeC < 0 || snakeC > rows*cellSize) {
+     gameOver = true;
+     alert("Game Over");
+   }
 
-
+   for (let i = 0; i < snakeLength.length; i++)
+     if (snakeR == snakeLength[i][0] && snakeC == snakeLength[i][1]) {
+      gameOver = true;
+      alert("Game Over");
+     }
   }
   function bitPlacement() {
     // Math.random returns a number between (0-1)
