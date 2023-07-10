@@ -29,7 +29,8 @@ let snakeLength = [];
 
 
 	/*----- event listeners -----*/
-
+// Moves the snake
+document.addEventListener("keyup", changePath)
 
 	/*----- functions -----*/
 
@@ -39,6 +40,7 @@ let snakeLength = [];
     grid = document.getElementById("grid");
     grid.height = rows * cellSize;
     grid.weight = cols * cellSize;
+
     // Will be used for drawing on the board
     context = grid.getContext("2d")
 
@@ -46,12 +48,23 @@ let snakeLength = [];
     // Places the bits in random places around the map
     bitPlacement();
 
-    // Moves the snake
-    document.addEventListener("keyup", changePath)
-
+  
     // updates the grid on the html and redraws it
     //update()
     setInterval(update, 1000/10);
+  }
+  
+  function startGame() {
+    console.log('starting game...');
+    toggleScreen("start-screen", false);
+    toggleScreen("grid", true);
+    update();
+  }
+
+  function toggleScreen(id, toggle) {
+     let element = document.getElementById(id);
+     let display = (toggle) ? "block" : "none";
+     element.style.display = display;
   }
 
   function update() {
@@ -103,6 +116,7 @@ if (gameOver) {
       alert("Game Over");
      }
   }
+
   function bitPlacement() {
     // Math.random returns a number between (0-1)
     // * the number of cols and rows (16.99,16.99) 

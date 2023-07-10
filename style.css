@@ -24,15 +24,13 @@ header {
   border-color: black;
 }
 
-.right-border {
-  border-right: .2em solid steelblue
-}
-.left-border {
 
-}
-.top-border {
 
-}
-.bottom-border {
-
+button {
+  margin-top: 5vmin;
+  padding: 2vmin;
+  font-size: 3vmin;
+  border-radius: 4vmin;
+  border: .1vmin soild lightsteelblue;
+  background-color: lightsteelblue;
 }
