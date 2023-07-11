@@ -125,9 +125,13 @@ document.addEventListener("keyup", changePath)
     }
     //Keeps body with head
     for ( let i = snakeLength.length-1; i > 0; i--) {
+      // assigns the value of the previous body segment (snakeLength[i - 1]) 
+      // to the current body segment (snakeLength[i]).
       snakeLength[i] = snakeLength[i-1];
     }
     if (snakeLength.length) {
+      // assigns the current position of the snake's head 
+      // to the first element of the snakeLength array.
       snakeLength[0] = [snakeR,snakeC];
     }
     
@@ -137,6 +141,7 @@ document.addEventListener("keyup", changePath)
     snakeC += moveC * cellSize;
     snakeR += moveR * cellSize;
     context.fillRect(snakeR, snakeC, cellSize, cellSize)
+
     //Increase length of snake when he it eats 
     for (let i = 0; i < snakeLength.length; i++) {
      context.fillRect(snakeLength[i][0], snakeLength[i][1], cellSize, cellSize);
@@ -146,13 +151,13 @@ document.addEventListener("keyup", changePath)
    // Conditions when snake hits border
    if (snakeR < 0 || snakeR > cols*cellSize || snakeC < 0 || snakeC > rows*cellSize) {
     gameOver = true;
-     gameEnd()
+     resetGame()
    }
   // condition when snake eats itself
    for (let i = 0; i < snakeLength.length; i++)
      if (snakeR == snakeLength[i][0] && snakeC == snakeLength[i][1]) {
       gameOver = true;
-      gameEnd()
+      resetGame()
      }
   }
 
