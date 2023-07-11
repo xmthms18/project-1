@@ -54,7 +54,7 @@ document.addEventListener("keyup", changePath)
   }
   
   function startGame() {
-    console.log('starting game...');
+    console.log('Starting game...');
     toggleScreen("start-screen", false);
     toggleScreen("grid", true);
     toggleScreen("game-over-screen", false);
@@ -66,10 +66,37 @@ document.addEventListener("keyup", changePath)
     toggleScreen("start-screen", false);
     toggleScreen("grid", false);
     toggleScreen("game-over-screen", true);
-    update()
+    update();
+  }
+  function resetGame() {
+    // Reset state variables
+  snakeR = cellSize * 5;
+  snakeC = cellSize * 5;
+  moveR = 0;
+  moveC = 0;
+  snakeLength = [];
+  bitsR = undefined;
+  bitsC = undefined;
+  gameOver = false;
+
+  // Clear the canvas
+  context.clearRect(0, 0, grid.width, grid.height);
+
+  // Hide the game over screen
+  toggleScreen("game-over-screen", false);
+
+  // Show the grid and start screen
+  toggleScreen("grid", true);
+  toggleScreen("start-screen", true);
+
+  // Start the game again
+  startGame();
+
+  //Resets food placement
+  bitPlacement();
   }
   
-  
+
   function toggleScreen(id, toggle) {
      let element = document.getElementById(id);
      let display = (toggle) ? "block" : "none";
