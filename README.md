@@ -1,4 +1,4 @@
-# Project 1 Pitch
+# SNEAKY SNAKE
 
 ## Elevator Pitch
 Move through each floor as a snake just looking for a nice meal. Be carful if you eat too much though as every bit of food will make you longer and less sneaky. Try not to eat your own tail by accident!! 

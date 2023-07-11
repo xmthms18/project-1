@@ -4,7 +4,6 @@ const cellSize = 16;
 const rows = 15;
 const cols = 18;
 
-
 /*----- state variables -----*/
 
 let grid;
@@ -151,13 +150,13 @@ document.addEventListener("keyup", changePath)
    // Conditions when snake hits border
    if (snakeR < 0 || snakeR > cols*cellSize || snakeC < 0 || snakeC > rows*cellSize) {
     gameOver = true;
-     resetGame()
+     gameEnd()
    }
   // condition when snake eats itself
    for (let i = 0; i < snakeLength.length; i++)
      if (snakeR == snakeLength[i][0] && snakeC == snakeLength[i][1]) {
       gameOver = true;
-      resetGame()
+      gameEnd()
      }
   }
 
